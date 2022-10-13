@@ -1,0 +1,26 @@
+From: intrigeri <intrigeri@boum.org>
+Date: Sat, 16 May 2020 08:10:34 +0000
+Subject: Fix "the the" typo
+
+---
+ lib/Text/Glob.pm  | 2 +-
+ t/Text-Glob_Sep.t | 0
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ mode change 100644 => 100755 t/Text-Glob_Sep.t
+
+diff --git a/lib/Text/Glob.pm b/lib/Text/Glob.pm
+index e171c66..e6cd66c 100644
+--- a/lib/Text/Glob.pm
++++ b/lib/Text/Glob.pm
+@@ -175,7 +175,7 @@ explicitly match the / in the glob (C<*/*.foo>), or set
+ C<$Text::Glob::strict_wildcard_slash> to a false value while compiling
+ the regex, or change the separator that Text::Glob uses by setting
+ C<$Text::Glob::seperator> (with the typo, yes) to an alternative value
+-while compiling the the regex.
++while compiling the regex.
+ 
+ =back
+ 
+diff --git a/t/Text-Glob_Sep.t b/t/Text-Glob_Sep.t
+old mode 100644
+new mode 100755

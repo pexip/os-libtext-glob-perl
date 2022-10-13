@@ -1,0 +1,23 @@
+Source: libtext-glob-perl
+Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+Uploaders: Ansgar Burchardt <ansgar@debian.org>
+Section: perl
+Testsuite: autopkgtest-pkg-perl
+Priority: optional
+Build-Depends: debhelper-compat (= 13)
+Build-Depends-Indep: perl
+Standards-Version: 4.6.0
+Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtext-glob-perl
+Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtext-glob-perl.git
+Homepage: https://metacpan.org/release/Text-Glob
+Rules-Requires-Root: no
+
+Package: libtext-glob-perl
+Architecture: all
+Depends: ${misc:Depends},
+         ${perl:Depends}
+Multi-Arch: foreign
+Description: Perl module for matching globbing patterns against text
+ Text::Glob implements glob(3) style matching that can be used to match
+ against text, rather than fetching names from a filesystem.  If you
+ want to do full file globbing use the File::Glob module instead.

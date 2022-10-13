@@ -1,0 +1,191 @@
+libtext-glob-perl (0.11-3) unstable; urgency=medium
+
+  [ Debian Janitor ]
+  * Apply multi-arch hints. + libtext-glob-perl: Add Multi-Arch: foreign.
+
+ -- Jelmer Vernooĳ <jelmer@debian.org>  Thu, 13 Oct 2022 22:45:23 +0100
+
+libtext-glob-perl (0.11-2) unstable; urgency=medium
+
+  * Team upload.
+
+  [ Debian Janitor ]
+  * Update standards version to 4.5.1, no changes needed.
+
+  [ gregor herrmann ]
+  * debian/rules: run dh_perl -d to avoid dependency on full perl.
+    Cf. #987615
+  * Declare compliance with Debian Policy 4.6.0.
+  * Drop pointless debian/upstream/metadata.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 24 Oct 2021 19:03:26 +0200
+
+libtext-glob-perl (0.11-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Florian Schlichting ]
+  * New upstream version 0.11
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-* headers for switch to salsa.debian.org
+
+  [ Utkarsh Gupta ]
+  * Bump debhelper compatibility level to 11
+  * Bump Standards-Version to 4.3.0 (no changes needed)
+
+  [ gregor herrmann ]
+  * debian/watch: use uscan version 4.
+
+  [ Debian Janitor ]
+  * Bump debhelper from old 11 to 12.
+  * Set debhelper-compat version in Build-Depends.
+  * Remove obsolete fields Contact, Name from debian/upstream/metadata
+    (already present in machine-readable debian/copyright).
+  * Update standards version to 4.5.0, no changes needed.
+
+  [ intrigeri ]
+  * Set Rules-Requires-Root: no
+  * Bump debhelper compatibility level to 13
+  * New patches: fix typos in POD and comments
+
+ -- intrigeri <intrigeri@debian.org>  Sat, 16 May 2020 08:17:14 +0000
+
+libtext-glob-perl (0.10-1) unstable; urgency=medium
+
+  * Team upload
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Use HTTPS transport protocol for Vcs-Git URI
+
+  [ gregor herrmann ]
+  * debian/copyright: change Copyright-Format 1.0 URL to HTTPS.
+
+  [ Florian Schlichting ]
+  * Import upstream version 0.10
+  * Add upstream metadata
+  * Drop build-dep on M::B
+  * Bump dh compat to level 9
+  * Declare compliance with Debian Policy 3.9.8
+  * Drop spelling.patch, applied upstream
+
+ -- Florian Schlichting <fsfs@debian.org>  Wed, 19 Oct 2016 19:01:45 +0200
+
+libtext-glob-perl (0.09-2) unstable; urgency=low
+
+  * Team upload.
+
+  [ Ansgar Burchardt ]
+  * debian/control: Convert Vcs-* fields to Git.
+
+  [ Salvatore Bonaccorso ]
+  * debian/copyright: Replace DEP5 Format-Specification URL from
+    svn.debian.org to anonscm.debian.org URL.
+  * Change Vcs-Git to canonical URI (git://anonscm.debian.org)
+  * Change search.cpan.org based URIs to metacpan.org based URIs
+
+  [ Axel Beckert ]
+  * debian/copyright: migrate pre-1.0 format to 1.0 using "cme fix dpkg-
+    copyright"
+
+  [ gregor herrmann ]
+  * Strip trailing slash from metacpan URLs.
+
+  [ Salvatore Bonaccorso ]
+  * Update Vcs-Browser URL to cgit web frontend
+
+  [ gregor herrmann ]
+  * Mark package as autopkgtest-able.
+  * Declare compliance with Debian Policy 3.9.6.
+  * Add explicit build dependency on libmodule-build-perl.
+  * Add a patch to fix a spelling mistake in the POD.
+
+ -- gregor herrmann <gregoa@debian.org>  Sun, 07 Jun 2015 23:18:08 +0200
+
+libtext-glob-perl (0.09-1) unstable; urgency=low
+
+  [ Salvatore Bonaccorso ]
+  * debian/control: Changed: Replace versioned (build-)dependency on
+    perl (>= 5.6.0-{12,16}) with an unversioned dependency on perl (as
+    permitted by Debian Policy 3.8.3).
+
+  [ Ansgar Burchardt ]
+  * New upstream release.
+  * Drop patch 01_but_not_a.diff: fixed upstream.
+  * Use source format 3.0 (quilt).
+  * Use debhelper compat level 8.
+  * debian/copyright: Formatting changes; refer to GPL-1; refer to "Debian
+    systems" instead of "Debian GNU/Linux systems".
+  * Bump Standards-Version to 3.9.1.
+  * Update my email address.
+
+ -- Ansgar Burchardt <ansgar@debian.org>  Sat, 05 Mar 2011 15:25:09 +0100
+
+libtext-glob-perl (0.08-2) unstable; urgency=low
+
+  [ Ryan Niebur ]
+  * moved with permission from Bart (Closes: #531508)
+  * debian/control: Added: Vcs-Svn field (source stanza); Vcs-Browser
+    field (source stanza); Homepage field (source stanza);
+    ${misc:Depends} to Depends: field. Removed: Homepage pseudo-field
+    (Description). Changed: Maintainer set to Debian Perl Group <pkg-
+    perl-maintainers@lists.alioth.debian.org> (was: Bart Martens
+    <bartm@knars.be>); Bart Martens <bartm@knars.be> moved to Uploaders.
+  * debian/watch: use dist-based URL.
+  * remove Bart from Uploaders
+
+  [ Nathan Handler ]
+  * debian/watch: Update to ignore development releases.
+
+  [ Ansgar Burchardt ]
+  * Use debhelper 7 and quilt instead of cdbs.
+  * Add myself to Uploaders.
+  * Bump Standards Version to 3.8.2.
+  * Drop build-dep on perl-modules.
+  * Convert debian/copyright to proposed machine-readable format.
+
+  [ gregor herrmann ]
+  * debian/control: make short description a noun phrase.
+
+ -- Ansgar Burchardt <ansgar@43-1.org>  Sun, 19 Jul 2009 20:02:02 +0200
+
+libtext-glob-perl (0.08-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/*: Repackaged with cdbs.
+  * debian/copyright: Updated.
+  * debian/watch: Updated.
+
+ -- Bart Martens <bartm@knars.be>  Tue,  5 Jun 2007 21:12:41 +0200
+
+libtext-glob-perl (0.07-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Bart Martens <bartm@knars.be>  Sat, 15 Jul 2006 17:07:36 +0200
+
+libtext-glob-perl (0.06-3) unstable; urgency=low
+
+  * New maintainer.  Closes: #357350.
+  * lib/Text/Glob.pm: Changed man page.  Closes: #327783.
+  * debian/copyright: Updated.
+  * debian/control: Standards version, moved debhelper to build-depends, and
+    added homepage to description.
+
+ -- Bart Martens <bartm@knars.be>  Sun, 11 Jun 2006 19:11:18 +0200
+
+libtext-glob-perl (0.06-2) unstable; urgency=low
+
+  * QA upload.
+  * Package is orphaned (#357350); set maintainer to Debian QA Group.
+  * Switch to debhelper 5.
+  * debian/watch: Add.
+  * Conforms to Standards version 3.6.2.
+
+ -- Matej Vela <vela@debian.org>  Mon,  3 Apr 2006 19:02:02 +0200
+
+libtext-glob-perl (0.06-1) unstable; urgency=low
+
+  * Initial Release.
+
+ -- S. Zachariah Sprackett <zac@sprackett.com>  Thu, 15 Jul 2004 20:45:00 -0400

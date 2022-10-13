@@ -1,0 +1,93 @@
+From: intrigeri <intrigeri@boum.org>
+Date: Sat, 16 May 2020 08:09:22 +0000
+Subject: =?utf-8?q?Fix_typo_in_POD_and_comments=3A_seperator_=E2=86=92_sepa?=
+ =?utf-8?q?rator?=
+
+Also, acknowledge in POD that there's a typo in the configuration variable
+name supported by the code.
+---
+ lib/Text/Glob.pm  |  8 ++++----
+ t/Text-Glob_Sep.t | 12 ++++++------
+ 2 files changed, 10 insertions(+), 10 deletions(-)
+
+diff --git a/lib/Text/Glob.pm b/lib/Text/Glob.pm
+index 9e56499..e171c66 100644
+--- a/lib/Text/Glob.pm
++++ b/lib/Text/Glob.pm
+@@ -168,14 +168,14 @@ the leading . in the glob pattern (C<.*.foo>), or set
+ C<$Text::Glob::strict_leading_dot> to a false value while compiling
+ the regex.
+ 
+-=item C<*> and C<?> do not match the seperator (i.e. do not match C</>)
++=item C<*> and C<?> do not match the separator (i.e. do not match C</>)
+ 
+ C<*.foo> does not match C<bar/baz.foo>.  For this you must either
+ explicitly match the / in the glob (C<*/*.foo>), or set
+ C<$Text::Glob::strict_wildcard_slash> to a false value while compiling
+-the regex, or change the seperator that Text::Glob uses by setting
+-C<$Text::Glob::seperator> to an alternative value while compiling the
+-the regex.
++the regex, or change the separator that Text::Glob uses by setting
++C<$Text::Glob::seperator> (with the typo, yes) to an alternative value
++while compiling the the regex.
+ 
+ =back
+ 
+diff --git a/t/Text-Glob_Sep.t b/t/Text-Glob_Sep.t
+index e82ef88..cb05764 100644
+--- a/t/Text-Glob_Sep.t
++++ b/t/Text-Glob_Sep.t
+@@ -15,7 +15,7 @@ BEGIN { use_ok('Text::Glob', qw( glob_to_regex ) ) }
+ # Test '*'
+ ########################################################################
+ 
+-# single char seperator
++# single char separator
+ {
+ 	local $Text::Glob::seperator = ":";
+ 	my $regex = glob_to_regex( 'foo*:bar' );
+@@ -26,7 +26,7 @@ BEGIN { use_ok('Text::Glob', qw( glob_to_regex ) ) }
+ 	ok( 'foo::wibble:bar' !~ $regex, "didn't match foo::wibble::bar" );
+ }
+ 
+-# multi char seperator
++# multi char separator
+ {
+ 	local $Text::Glob::seperator = "::";
+ 	my $regex = glob_to_regex( 'foo*::bar' );
+@@ -37,7 +37,7 @@ BEGIN { use_ok('Text::Glob', qw( glob_to_regex ) ) }
+ 	ok( 'foo::wibble::bar' !~ $regex, "didn't match foo::wibble::bar" );
+ }
+ 
+-# meta char seperator
++# meta char separator
+ {
+ 	local $Text::Glob::seperator = "(";
+ 	my $regex = glob_to_regex( 'foo*(bar' );
+@@ -52,7 +52,7 @@ BEGIN { use_ok('Text::Glob', qw( glob_to_regex ) ) }
+ # Test '?'
+ ########################################################################
+ 
+-# single char seperator
++# single char separator
+ {
+ 	local $Text::Glob::seperator = ":";
+ 	my $regex = glob_to_regex( 'fo?:bar' );
+@@ -61,7 +61,7 @@ BEGIN { use_ok('Text::Glob', qw( glob_to_regex ) ) }
+ 	ok( 'fo::bar' !~ $regex, "didn't match fo::bar" );
+ }
+ 
+-# multi char seperator
++# multi char separator
+ {
+ 	local $Text::Glob::seperator = "::";
+ 	my $regex = glob_to_regex( 'f??::bar' );
+@@ -71,7 +71,7 @@ BEGIN { use_ok('Text::Glob', qw( glob_to_regex ) ) }
+ 	ok( 'fo:::bar' !~ $regex, "didn't match fo:::bar" );
+ }
+ 
+-# meta char seperator
++# meta char separator
+ {
+ 	local $Text::Glob::seperator = "((";
+ 	my $regex = glob_to_regex( 'f??((bar' );
