@@ -1,6 +1,7 @@
 Source: libtext-glob-perl
-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
-Uploaders: Ansgar Burchardt <ansgar@debian.org>
+Maintainer: Pexip AS <packaging@pexip.com>
+XSBC-Pexip-Original-Maintainer: Debian Perl Group <pkg-perl-maintainers@lists.alioth.debian.org>
+XSBC-Pexip-Original-Uploaders: Ansgar Burchardt <ansgar@debian.org>
 Section: perl
 Testsuite: autopkgtest-pkg-perl
 Priority: optional
@@ -11,6 +12,7 @@ Vcs-Browser: https://salsa.debian.org/perl-team/modules/packages/libtext-glob-pe
 Vcs-Git: https://salsa.debian.org/perl-team/modules/packages/libtext-glob-perl.git
 Homepage: https://metacpan.org/release/Text-Glob
 Rules-Requires-Root: no
+XS-Pexip-Upstream: http://deb.debian.org/debian/ bookworm
 
 Package: libtext-glob-perl
 Architecture: all
